@@ -6,4 +6,8 @@
     <RootNamespace>DesignPatterns</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DesignPatterns.SOLID\DesignPatterns.SOLID.csproj" />
+  </ItemGroup>
+
 </Project>
