@@ -9,6 +9,6 @@ namespace DesignPatterns.SOLID.MatrixCalculator.Interfaces
     public interface IMatrix
     {
         int Size { get; }
-        int Get(int i, int j);
+        double Get(int i, int j);
     }
 }

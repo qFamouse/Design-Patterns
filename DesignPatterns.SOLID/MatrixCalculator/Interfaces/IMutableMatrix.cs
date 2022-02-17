@@ -8,6 +8,6 @@ namespace DesignPatterns.SOLID.MatrixCalculator.Interfaces
 {
     public interface IMutableMatrix : IMatrix
     {
-        void Set(int i, int j, int value);
+        void Set(int i, int j, double value);
     }
 }

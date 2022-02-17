@@ -8,17 +8,16 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            UsualMatrix a = new UsualMatrix(new int[2, 2]
+            UsualMatrix a = new UsualMatrix(new int[,]
             {
-                {2, 2},
-                {2, 2}
+                {1, 1, 1},
+                {1, 1, 1},
+                {1, 1, 1}
             });
 
-            ConstantMatrix b = new ConstantMatrix(1, 2);
+            ConstantMatrix b = new ConstantMatrix(1, 3);
 
-            var c = b + a;
-
-            var s = 5 + 5;
+            var c = a + b;
         }
     }
 }

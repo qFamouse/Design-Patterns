@@ -27,7 +27,8 @@ namespace DesignPatterns.SOLID.MatrixCalculator
         }
         private void IndexWithinOfRange(in int i,in int j)
         {
-            if (i >= Size || i < 0)
+            if (i >= Size || i < 0 ||
+                j >= Size || j < 0)
             {
                 throw new IndexOutOfRangeException("Incorrect indexes");
             }
