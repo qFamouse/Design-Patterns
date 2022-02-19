@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
-using DesignPatterns.SOLID.MatrixCalculator.Interfaces;
 
-namespace DesignPatterns.SOLID.MatrixCalculator
+namespace DesignPatterns.SOLID.MatrixCalculator.Matrix
 {
-    class ConstantDiagonalMatrix : IMatrix
+    class ConstantDiagonalMatrix : BaseMatrix
     {
-        private readonly int _diagonalValue;
-        public int Size { get; }
+        private double _diagonalValue;
+        public override int Size { get; }
 
         ConstantDiagonalMatrix(int diagonalValue, int size)
         {
@@ -21,10 +19,20 @@ namespace DesignPatterns.SOLID.MatrixCalculator
             Size = size;
         }
 
-        public int Get(int i, int j)
+        public override double Get(int i, int j)
         {
             IndexesRangeValidation(i, j);
             return i == j ? _diagonalValue : 0;
+        }
+
+        public override void Set(int i, int j, double value)
+        {
+            if (i != j)
+            {
+                throw new ArgumentException("You can't change not diagonal element");
+            }
+
+            _diagonalValue = value;
         }
 
         private void SizeValidation(in int size)
