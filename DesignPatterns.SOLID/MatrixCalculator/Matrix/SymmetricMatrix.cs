@@ -11,7 +11,7 @@ namespace DesignPatterns.SOLID.MatrixCalculator.Matrix
         private readonly double[][] _matrix;
         public override int Size { get; }
 
-        SymmetricMatrix(double[][] matrix)
+        public SymmetricMatrix(double[][] matrix)
         {
             IsTriangularMatrix(matrix);
             _matrix = matrix;

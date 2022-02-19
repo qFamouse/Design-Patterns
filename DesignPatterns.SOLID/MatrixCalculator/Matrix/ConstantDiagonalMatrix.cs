@@ -11,7 +11,7 @@ namespace DesignPatterns.SOLID.MatrixCalculator.Matrix
         private double _diagonalValue;
         public override int Size { get; }
 
-        ConstantDiagonalMatrix(int diagonalValue, int size)
+        public ConstantDiagonalMatrix(int diagonalValue, int size)
         {
             SizeValidation(size);
 
