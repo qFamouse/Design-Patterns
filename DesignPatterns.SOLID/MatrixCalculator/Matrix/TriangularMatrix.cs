@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DesignPatterns.SOLID.MatrixCalculator.Interfaces;
 
-namespace DesignPatterns.SOLID.MatrixCalculator
+namespace DesignPatterns.SOLID.MatrixCalculator.Matrix
 {
-    public class TriangularMatrix : IMutableMatrix
+    class TriangularMatrix : BaseMatrix
     {
-        private readonly int[][] _matrix;
+        private readonly double[][] _matrix;
         private readonly bool _isUpperTriangular;
-        public int Size { get; }
+        public override int Size { get; }
 
-        public TriangularMatrix(int[][] matrix, bool isUpperTriangular = false)
+        public TriangularMatrix(double[][] matrix, bool isUpperTriangular = false)
         {
             IsTriangularMatrix(matrix);
             _matrix = matrix;
@@ -21,7 +20,7 @@ namespace DesignPatterns.SOLID.MatrixCalculator
             _isUpperTriangular = isUpperTriangular;
         }
 
-        public int Get(int i, int j)
+        public override double Get(int i, int j)
         {
             if (_isUpperTriangular)
             {
@@ -33,7 +32,7 @@ namespace DesignPatterns.SOLID.MatrixCalculator
             }
         }
 
-        public void Set(int i, int j, int value)
+        public override void Set(int i, int j, double value)
         {
             IsValidIndexes(i, j);
 
@@ -47,7 +46,7 @@ namespace DesignPatterns.SOLID.MatrixCalculator
             }
         }
 
-        private void IsTriangularMatrix(int[][] matrix)
+        private void IsTriangularMatrix(double[][] matrix)
         {
             for (int i = 0; i < matrix.Length; i++)
             {
