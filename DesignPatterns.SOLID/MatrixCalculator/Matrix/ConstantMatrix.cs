@@ -1,31 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DesignPatterns.SOLID.MatrixCalculator.Interfaces;
 
-namespace DesignPatterns.SOLID.MatrixCalculator
+namespace DesignPatterns.SOLID.MatrixCalculator.Matrix
 {
-    public class ConstantMatrix : IMatrix
+    class ConstantMatrix : BaseMatrix
     {
-        private readonly int _value;
-        public int Size { get; }
+        private double _value;
+        public override int Size { get; }
 
-        public ConstantMatrix(int value, int size)
+        public ConstantMatrix(double value, int size)
         {
             SizeIsValid(size);
             _value = value;
             Size = size;
         }
 
-        public int Get(int i, int j)
+        public override double Get(int i, int j)
         {
             IndexWithinOfRange(i, j);
             return _value;
         }
-        private void IndexWithinOfRange(in int i,in int j)
+
+        public override void Set(int i, int j, double value)
+        {
+            IndexWithinOfRange(i, j);
+            _value = value;
+        }
+
+        private void IndexWithinOfRange(in int i, in int j)
         {
             if (i >= Size || i < 0 ||
                 j >= Size || j < 0)
