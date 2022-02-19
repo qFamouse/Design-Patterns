@@ -27,8 +27,6 @@ namespace DesignPatterns.SOLID.MatrixCalculator.Matrix
 
         public override void Set(int i, int j, double value) => _matrix[i, j] = value;
 
-        #region Validation
-
         private static void IsSquareMatrix(double[,] matrix)
         {
             if (matrix.GetLength(0) != matrix.GetLength(1))
@@ -44,15 +42,5 @@ namespace DesignPatterns.SOLID.MatrixCalculator.Matrix
                 throw new NullReferenceException("Matrix is null");
             }
         }
-
-        private static void EqualSizeValidation(int size1, int size2)
-        {
-            if (size1 != size2)
-            {
-                throw new ArithmeticException("The dimensions of the matrix are not equal");
-            }
-        }
-
-        #endregion
     }
 }
