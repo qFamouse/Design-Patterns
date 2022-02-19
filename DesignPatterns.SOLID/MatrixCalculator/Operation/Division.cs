@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.SOLID.MatrixCalculator.Operation
 {
-    class Division : IOperation
+    public sealed class Division : IOperation
     {
         public static BaseMatrix Inverse(BaseMatrix matrix)
         {

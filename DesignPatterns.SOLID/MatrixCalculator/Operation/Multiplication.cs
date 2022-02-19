@@ -9,7 +9,7 @@ using Microsoft.VisualBasic.CompilerServices;
 
 namespace DesignPatterns.SOLID.MatrixCalculator.Operation
 {
-    class Multiplication : IOperation
+    public sealed class Multiplication : IOperation
     {
         public BaseMatrix Calc(BaseMatrix a, BaseMatrix b)
         {

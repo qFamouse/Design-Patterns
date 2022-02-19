@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.SOLID.MatrixCalculator.Operation
 {
-    public class Addition : IOperation
+    public sealed class Addition : IOperation
     {
         public BaseMatrix Calc(BaseMatrix a, BaseMatrix b)
         {
