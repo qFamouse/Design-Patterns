@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.SOLID.MatrixCalculator.Matrix
 {
-    class ConstantMatrix : BaseMatrix
+    public sealed class ConstantMatrix : BaseMatrix
     {
         private double _value;
         public override int Size { get; }

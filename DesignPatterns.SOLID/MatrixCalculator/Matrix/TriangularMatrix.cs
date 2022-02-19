@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.SOLID.MatrixCalculator.Matrix
 {
-    class TriangularMatrix : BaseMatrix
+    public sealed class TriangularMatrix : BaseMatrix
     {
         private readonly double[][] _matrix;
         private readonly bool _isUpperTriangular;
