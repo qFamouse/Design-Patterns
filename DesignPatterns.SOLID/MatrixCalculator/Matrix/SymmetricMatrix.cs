@@ -3,28 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DesignPatterns.SOLID.MatrixCalculator.Interfaces;
 
-namespace DesignPatterns.SOLID.MatrixCalculator
+namespace DesignPatterns.SOLID.MatrixCalculator.Matrix
 {
-    class SymmetricMatrix : IMutableMatrix
+    class SymmetricMatrix : BaseMatrix
     {
-        private readonly int[][] _matrix;
-        public int Size { get; }
+        private readonly double[][] _matrix;
+        public override int Size { get; }
 
-        SymmetricMatrix(int[][] matrix)
+        SymmetricMatrix(double[][] matrix)
         {
             IsTriangularMatrix(matrix);
             _matrix = matrix;
             Size = matrix.Length;
         }
 
-        public int Get(int i, int j)
+        public override double Get(int i, int j)
         {
             return j < i ? _matrix[i][j] : _matrix[j][i];
         }
 
-        public void Set(int i, int j, int value)
+        public override void Set(int i, int j, double value)
         {
             if (i < j)
             {
@@ -36,7 +35,7 @@ namespace DesignPatterns.SOLID.MatrixCalculator
             }
         }
 
-        private void IsTriangularMatrix(int[][] matrix)
+        private void IsTriangularMatrix(double[][] matrix)
         {
             for (int i = 0; i < matrix.Length; i++)
             {

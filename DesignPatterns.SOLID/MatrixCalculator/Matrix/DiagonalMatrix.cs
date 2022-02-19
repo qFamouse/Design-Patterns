@@ -3,28 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DesignPatterns.SOLID.MatrixCalculator.Interfaces;
 
-namespace DesignPatterns.SOLID.MatrixCalculator
+namespace DesignPatterns.SOLID.MatrixCalculator.Matrix
 {
-    public class DiagonalMatrix : IMutableMatrix
+    class DiagonalMatrix : BaseMatrix
     {
-        private readonly int[] _diagonalMatrix;
-        public int Size { get; }
+        private readonly double[] _diagonalMatrix;
+        public override int Size { get; }
 
-        public DiagonalMatrix(int[] diagonalMatrix)
+        public DiagonalMatrix(double[] diagonalMatrix)
         {
             _diagonalMatrix = diagonalMatrix;
             Size = diagonalMatrix.Length;
         }
 
-        public int Get(int i, int j)
+        public override double Get(int i, int j)
         {
             IndexesRangeValidation(i, j);
             return i == j ? _diagonalMatrix[i] : 0;
         }
 
-        public void Set(int i, int j, int value)
+        public override void Set(int i, int j, double value)
         {
             IsDiagonalIndexes(i, j);
             IndexesRangeValidation(i, j);
