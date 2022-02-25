@@ -133,22 +133,24 @@ namespace DesignPatterns.Tests.SOLID
                     {
                         if (j < i)
                         {
-                            Console.Write($"{0,offset:g6}");
+                            Console.Write($"{matrix[j][i],offset:g6}");
+
                         }
                         else
                         {
-                            Console.Write($"{matrix[j][i],offset:g6}");
+                            Console.Write($"{0,offset:g6}");
                         }
                     }
                     else
                     {
-                        if (j < i)
+                        if (i < j)
                         {
-                            Console.Write($"{matrix[i][j],offset:g6}");
+                            Console.Write($"{0,offset:g6}");
                         }
                         else
                         {
-                            Console.Write($"{0,offset:g6}");
+                            Console.Write($"{matrix[i][j],offset:g6}");
+
                         }
                     }
                 }
