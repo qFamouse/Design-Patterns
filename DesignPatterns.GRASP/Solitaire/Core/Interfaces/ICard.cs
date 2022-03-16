@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DesignPatterns.GRASP.Solitaire.Core
+﻿namespace DesignPatterns.GRASP.Solitaire.Core.Interfaces
 {
     internal enum CardValue
     {
@@ -33,7 +27,7 @@ namespace DesignPatterns.GRASP.Solitaire.Core
 
     internal interface ICard
     {
-        CardValue Value { get; set; }
-        CardSuit Suit { get; set; }
+        CardValue Value { get; }
+        CardSuit Suit { get; }
     }
 }
