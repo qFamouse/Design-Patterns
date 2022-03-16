@@ -19,7 +19,7 @@
 
     internal enum CardSuit
     {
-        Сlubs,
+        Clubs,
         Diamonds,
         Hearts,
         Spades
