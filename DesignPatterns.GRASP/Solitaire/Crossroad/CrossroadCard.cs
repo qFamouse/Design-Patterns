@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using DesignPatterns.GRASP.Solitaire.Core.Interfaces;
 
 namespace DesignPatterns.GRASP.Solitaire.Crossroad
 {
-    internal class CrossroadCard : ICard
+    internal struct CrossroadCard : ICard
     {
         public CardValue Value { get; init; }
         public CardSuit Suit { get; init; }
