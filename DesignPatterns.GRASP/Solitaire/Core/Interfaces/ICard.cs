@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.GRASP.Solitaire.Core.Interfaces
 {
-    internal enum CardValue
+    public enum CardValue
     {
         A    = 1,
         II   = 2,
@@ -17,7 +17,7 @@
         K    = 13,
     }
 
-    internal enum CardSuit
+    public enum CardSuit
     {
         Clubs,
         Diamonds,
@@ -25,9 +25,10 @@
         Spades
     }
 
-    internal interface ICard
+    public interface ICard
     {
         CardValue Value { get; }
         CardSuit Suit { get; }
     }
+
 }
