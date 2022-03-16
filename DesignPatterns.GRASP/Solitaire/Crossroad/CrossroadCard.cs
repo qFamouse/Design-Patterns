@@ -37,9 +37,6 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroad
             return a.Value != b.Value;
         }
 
-        public override string ToString()
-        {
-            return this.ToStringExtension();
-        }
+        public override string ToString() => this.ToStringExtension();
     }
 }
