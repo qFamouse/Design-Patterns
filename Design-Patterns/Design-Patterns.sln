@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32210.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns.csproj", "{CFA4FFDB-8187-4362-8295-DA0002B8851E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "DesignPatterns.csproj", "{CFA4FFDB-8187-4362-8295-DA0002B8851E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.SOLID", "..\DesignPatterns.SOLID\DesignPatterns.SOLID.csproj", "{1A4461FF-DAB9-4D56-9508-E7506EDE7469}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.SOLID", "..\DesignPatterns.SOLID\DesignPatterns.SOLID.csproj", "{1A4461FF-DAB9-4D56-9508-E7506EDE7469}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.GRASP", "..\DesignPatterns.GRASP\DesignPatterns.GRASP.csproj", "{4C785C49-CD90-4736-9B9E-ED046127716E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1A4461FF-DAB9-4D56-9508-E7506EDE7469}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A4461FF-DAB9-4D56-9508-E7506EDE7469}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A4461FF-DAB9-4D56-9508-E7506EDE7469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C785C49-CD90-4736-9B9E-ED046127716E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C785C49-CD90-4736-9B9E-ED046127716E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C785C49-CD90-4736-9B9E-ED046127716E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C785C49-CD90-4736-9B9E-ED046127716E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
