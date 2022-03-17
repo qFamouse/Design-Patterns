@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.2.32210.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "DesignPatterns.csproj", "{CFA4FFDB-8187-4362-8295-DA0002B8851E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4C785C49-CD90-4736-9B9E-ED046127716E} = {4C785C49-CD90-4736-9B9E-ED046127716E}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.SOLID", "..\DesignPatterns.SOLID\DesignPatterns.SOLID.csproj", "{1A4461FF-DAB9-4D56-9508-E7506EDE7469}"
 EndProject
