@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DesignPatterns.GRASP.Solitaire.Core.Interfaces;
+using DesignPatterns.GRASP.Solitaire.Crossroads;
 
 namespace DesignPatterns.GRASP.Solitaire.Core.Extensions
 {
@@ -39,6 +40,22 @@ namespace DesignPatterns.GRASP.Solitaire.Core.Extensions
             };
 
             return $"{value}{suit}";
+        }
+        /// <summary>
+        /// Fisher–Yates shuffle (https://en.wikipedia.org/wiki/Fisher–Yates_shuffle)
+        /// </summary>
+        /// <typeparam name="ICard">Interface for all cards</typeparam>
+        /// <param name="cards">List of cards to be shuffled</param>
+        public static void Shuffle<ICard>(this IList<ICard> cards)
+        {
+            Random rng = new Random();
+            int n = cards.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                (cards[k], cards[n]) = (cards[n], cards[k]);
+            }
         }
     }
 }
