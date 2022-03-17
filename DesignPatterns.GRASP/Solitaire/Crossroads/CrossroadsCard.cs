@@ -4,35 +4,35 @@ using DesignPatterns.GRASP.Solitaire.Core;
 using DesignPatterns.GRASP.Solitaire.Core.Extensions;
 using DesignPatterns.GRASP.Solitaire.Core.Interfaces;
 
-namespace DesignPatterns.GRASP.Solitaire.Crossroad
+namespace DesignPatterns.GRASP.Solitaire.Crossroads
 {
-    public struct CrossroadCard : ICard
+    public struct CrossroadsCard : ICard
     {
         public CardValue Value { get; }
         public CardSuit Suit { get; }
 
-        public CrossroadCard(CardValue value, CardSuit suit)
+        public CrossroadsCard(CardValue value, CardSuit suit)
         {
             Value = value;
             Suit = suit;
         }
 
-        public static bool operator >(CrossroadCard a, CrossroadCard b)
+        public static bool operator >(CrossroadsCard a, CrossroadsCard b)
         {
             return a.Value > b.Value;
         }
 
-        public static bool operator <(CrossroadCard a, CrossroadCard b)
+        public static bool operator <(CrossroadsCard a, CrossroadsCard b)
         {
             return a.Value < b.Value;
         }
 
-        public static bool operator ==(CrossroadCard a, CrossroadCard b)
+        public static bool operator ==(CrossroadsCard a, CrossroadsCard b)
         {
             return a.Value == b.Value;
         }
 
-        public static bool operator !=(CrossroadCard a, CrossroadCard b)
+        public static bool operator !=(CrossroadsCard a, CrossroadsCard b)
         {
             return a.Value != b.Value;
         }
