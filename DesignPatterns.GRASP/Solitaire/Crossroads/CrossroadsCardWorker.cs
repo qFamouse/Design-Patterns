@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.GRASP.Solitaire.Crossroads
 {
-    public enum CardType
+    public enum CardPosition
     {
         Top = 0,
         Right = 1,
@@ -53,48 +53,90 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
             _centralStack.Push(_reserveStack.Pop());
         }
 
-        private void Remove(CardType cardType)
+        public bool TryRemoveCoupleCards(CardPosition cardPosA, CardPosition cardPosB)
         {
-            if (cardType is CardType.Top or CardType.Right or CardType.Bottom or CardType.Left)
+            if (TryPeekCard(cardPosA, out CrossroadsCard? cardA) && TryPeekCard(cardPosB, out CrossroadsCard? cardB))
             {
-                _singleCards[(int)cardType] = null;
+                if (cardA == cardB)
+                {
+                    Remove(cardPosA, cardPosB);
+                    return true;
+                }
+            }
+
+            return false;
+            }
+
+        public bool TryPutReserveToCental()
+            {
+            if (_reserveStack.TryPop(out CrossroadsCard? reserveCard))
+            {
+                _centralStack.Push(reserveCard);
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool TryPeekCard(CardPosition cardPos, out CrossroadsCard? card)
+        {
+            return cardPos switch
+            {
+                _ when cardPos is CardPosition.Top
+                                or CardPosition.Right
+                                or CardPosition.Bottom
+                                or CardPosition.Left => (card = _singleCards[(int)cardPos]) is not null,
+                CardPosition.Central => _centralStack.TryPeek(out card),
+                CardPosition.Reserve => _reserveStack.TryPeek(out card),
+
+                _ => throw new NotSupportedException("Not supported card position")
+            };
+        }
+
+        #region Private Methods
+
+        private void Remove(CardPosition cardPos)
+        {
+            if (cardPos is CardPosition.Top or CardPosition.Right or CardPosition.Bottom or CardPosition.Left)
+            {
+                _singleCards[(int)cardPos] = null;
 
             }
-            else if (cardType is CardType.Central)
+            else if (cardPos is CardPosition.Central)
             {
                 _centralStack.Pop();
             }
-            else if (cardType is CardType.Reserve)
+            else if (cardPos is CardPosition.Reserve)
             {
                 _reserveStack.Pop();
             }
 
-            UpdateCardTo(cardType);
+            UpdateCardTo(cardPos);
         }
 
-        private void Remove(params CardType[] cardTypes)
+        private void Remove(params CardPosition[] cardPositions)
         {
-            foreach (var type in cardTypes)
+            foreach (var position in cardPositions)
             {
-                Remove(type);
+                Remove(position);
             }
         }
 
-        private void UpdateCardTo(CardType cardType)
+        private void UpdateCardTo(CardPosition cardPos)
         {
             CrossroadsCard? bufferCard = null;
 
-            if (cardType is CardType.Top or CardType.Right or CardType.Bottom or CardType.Left)
+            if (cardPos is CardPosition.Top or CardPosition.Right or CardPosition.Bottom or CardPosition.Left)
             {
                 if (_centralStack.TryPop(out bufferCard))
                 {
-                    _singleCards[(int)cardType] = bufferCard;
+                    _singleCards[(int)cardPos] = bufferCard;
                 }
                 else
                 {
                     if (_reserveStack.TryPop(out bufferCard))
                     {
-                        _singleCards[(int)cardType] = bufferCard;
+                        _singleCards[(int)cardPos] = bufferCard;
                     }
 
                     if (_reserveStack.TryPop(out bufferCard))
@@ -103,13 +145,13 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
                     }
                 }
             }
-            else if (cardType is CardType.Central && _reserveStack.TryPop(out bufferCard))
+            else if (cardPos is CardPosition.Central && _reserveStack.TryPop(out bufferCard))
             {
                 _centralStack.Push(bufferCard);
             }
         }
 
-        public bool TryRemoveCoupleCards(CardType cardTypeA, CardType cardTypeB)
+        #endregion
         {
             if (TryPeekCard(cardTypeA, out CrossroadsCard? cardA) && TryPeekCard(cardTypeB, out CrossroadsCard? cardB))
             {
