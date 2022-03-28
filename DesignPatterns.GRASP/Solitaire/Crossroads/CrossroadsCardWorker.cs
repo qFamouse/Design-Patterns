@@ -20,6 +20,8 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
 
     internal class CrossroadsCardWorker
     {
+        public int DeckSize => _reserveStack.Count;
+
         private Stack<CrossroadsCard?> _reserveStack;
         private CrossroadsCard?[] _singleCards;
         private Stack<CrossroadsCard?> _centralStack;
@@ -65,10 +67,10 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
             }
 
             return false;
-            }
+        }
 
         public bool TryPutReserveToCental()
-            {
+        {
             if (_reserveStack.TryPop(out CrossroadsCard? reserveCard))
             {
                 _centralStack.Push(reserveCard);
@@ -152,43 +154,5 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
         }
 
         #endregion
-        {
-            if (TryPeekCard(cardTypeA, out CrossroadsCard? cardA) && TryPeekCard(cardTypeB, out CrossroadsCard? cardB))
-            {
-                if (cardA == cardB)
-                {
-                    Remove(cardTypeA, cardTypeB);
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
-        public bool TryPutReserveToCental()
-        {
-            if (_reserveStack.TryPop(out CrossroadsCard? reserveCard))
-            {
-                _centralStack.Push(reserveCard);
-                return true;
-            }
-
-            return false;
-        }
-
-        public bool TryPeekCard(CardType cardType, out CrossroadsCard? card)
-        {
-            return cardType switch
-            {
-                _ when cardType is CardType.Top 
-                                or CardType.Right
-                                or CardType.Bottom
-                                or CardType.Left => (card = _singleCards[(int)cardType]) is not null,
-                CardType.Central => _centralStack.TryPeek(out card),
-                CardType.Reserve => _reserveStack.TryPeek(out card),
-
-                _ => throw new NotSupportedException("Not supported card type")
-            };
-        }
     }
 }
