@@ -55,7 +55,7 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
             _centralStack.Push(_reserveStack.Pop());
         }
 
-        public bool TryRemoveCoupleCards(CardPosition cardPosA, CardPosition cardPosB)
+        public bool TryParceCoupleCards(CardPosition cardPosA, CardPosition cardPosB)
         {
             if (TryPeekCard(cardPosA, out CrossroadsCard? cardA) && TryPeekCard(cardPosB, out CrossroadsCard? cardB))
             {

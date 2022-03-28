@@ -21,7 +21,7 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
 
         public void NewGame() => _cardWorker.NewGame();
 
-        public void testc(CardPosition a, CardPosition b) => _cardWorker.TryRemoveCoupleCards(a, b);
+        public bool TryParceCoupleCards(CardPosition a, CardPosition b) => _cardWorker.TryParceCoupleCards(a, b);
 
         public override string ToString()
         {
