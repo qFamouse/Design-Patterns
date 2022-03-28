@@ -19,16 +19,16 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
 
         public void NewGame() => _cardWorker.NewGame();
 
-        public void testc(CardType a, CardType b) => _cardWorker.TryRemoveCoupleCards(a, b);
+        public void testc(CardPosition a, CardPosition b) => _cardWorker.TryRemoveCoupleCards(a, b);
 
         public override string ToString()
         {
-            string PeekCard(CardType cardType) => _cardWorker.TryPeekCard(cardType, out CrossroadsCard? card) ? card.ToString() : String.Empty;
+            string PeekCard(CardPosition cardType) => _cardWorker.TryPeekCard(cardType, out CrossroadsCard? card) ? card.ToString() : String.Empty;
 
             return
-                $"{PeekCard(CardType.Top), 15}\n" +
-                $"{PeekCard(CardType.Reserve)}{PeekCard(CardType.Left),8}{PeekCard(CardType.Central),5}{PeekCard(CardType.Right), 5}\n" +
-                $"{PeekCard(CardType.Bottom), 15}\n";
+                $"{PeekCard(CardPosition.Top), 15}\n" +
+                $"{PeekCard(CardPosition.Reserve)}{PeekCard(CardPosition.Left),8}{PeekCard(CardPosition.Central),5}{PeekCard(CardPosition.Right), 5}\n" +
+                $"{PeekCard(CardPosition.Bottom), 15}\n";
         }
     }
 }
