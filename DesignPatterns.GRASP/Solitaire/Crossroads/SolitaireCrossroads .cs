@@ -10,50 +10,25 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
 {
     public sealed class SolitaireCrossroads
     {
-        private const int SINGLE_CARDS_COUNT = 4;
-        private const int MAIN_DECK_SIZE = 52;
+        private CrossroadsCardWorker _cardWorker;
 
-        private Stack<CrossroadsCard> _reserveStack;
-
-        private CrossroadsCard[] _singleCards;
-
-        private Stack<CrossroadsCard> _centralStack;
-        
         public SolitaireCrossroads()
         {
-
+            _cardWorker = new CrossroadsCardWorker();
         }
 
-        public void GameInit()
-        {
-            // Initialization cards //
-            var cards = new List<CrossroadsCard>(MAIN_DECK_SIZE);
+        public void NewGame() => _cardWorker.NewGame();
 
-            foreach (CardValue value in Enum.GetValues(typeof(CardValue)))
-            {
-                foreach (CardSuit suit in Enum.GetValues(typeof(CardSuit)))
-                {
-                    cards.Add(new CrossroadsCard(value, suit));
-                }
-            }
-
-            cards.Shuffle();
-            _reserveStack = new Stack<CrossroadsCard>(cards);
-
-            // Initialize playing cards //
-            _singleCards = new CrossroadsCard[SINGLE_CARDS_COUNT];
-            _singleCards = _singleCards.Select(card => card = _reserveStack.Pop()).ToArray();
-
-            _centralStack = new Stack<CrossroadsCard>();
-            _centralStack.Push(_reserveStack.Pop());
-        }
+        public void testc(CardType a, CardType b) => _cardWorker.TryRemoveCoupleCards(a, b);
 
         public override string ToString()
         {
+            string PeekCard(CardType cardType) => _cardWorker.TryPeekCard(cardType, out CrossroadsCard? card) ? card.ToString() : String.Empty;
+
             return
-                $"{_singleCards[0], 15}\n" +
-                $"{_reserveStack.Peek()}{_singleCards[1], 8}{_centralStack.Peek(), 5}{_singleCards[2], 5}\n" +
-                $"{_singleCards[3], 15}\n";
+                $"{PeekCard(CardType.Top), 15}\n" +
+                $"{PeekCard(CardType.Reserve)}{PeekCard(CardType.Left),8}{PeekCard(CardType.Central),5}{PeekCard(CardType.Right), 5}\n" +
+                $"{PeekCard(CardType.Bottom), 15}\n";
         }
     }
 }
