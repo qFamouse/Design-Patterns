@@ -20,8 +20,6 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
 
     internal class CrossroadsCardWorker
     {
-        
-
         private Stack<CrossroadsCard?> _reserveStack;
         private CrossroadsCard?[] _singleCards;
         private Stack<CrossroadsCard?> _centralStack;
@@ -120,6 +118,17 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
                     Remove(cardTypeA, cardTypeB);
                     return true;
                 }
+            }
+
+            return false;
+        }
+
+        public bool TryPutReserveToCental()
+        {
+            if (_reserveStack.TryPop(out CrossroadsCard? reserveCard))
+            {
+                _centralStack.Push(reserveCard);
+                return true;
             }
 
             return false;
