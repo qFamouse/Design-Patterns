@@ -12,7 +12,7 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
     {
         private CrossroadsCardWorker _cardWorker;
 
-        public bool isGameOver => _cardWorker.DeckSize <= 0;
+        public bool isGameOver => _cardWorker.DeckSize + 1 <= 0;
 
         public SolitaireCrossroads()
         {
@@ -28,9 +28,9 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
             string PeekCard(CardPosition cardType) => _cardWorker.TryPeekCard(cardType, out CrossroadsCard? card) ? card.ToString() : String.Empty;
 
             return
-                $"{PeekCard(CardPosition.Top), 15}\n" +
-                $"{PeekCard(CardPosition.Reserve)}{PeekCard(CardPosition.Left),8}{PeekCard(CardPosition.Central),5}{PeekCard(CardPosition.Right), 5}\n" +
-                $"{PeekCard(CardPosition.Bottom), 15}\n";
+                $"{PeekCard(CardPosition.Top), 16}\n" +
+                $"{PeekCard(CardPosition.Reserve)}{PeekCard(CardPosition.Left),7}{PeekCard(CardPosition.Central),7}{PeekCard(CardPosition.Right), 5}\n" +
+                $"{PeekCard(CardPosition.Bottom), 16}\n";
         }
     }
 }
