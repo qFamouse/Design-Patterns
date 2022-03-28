@@ -12,6 +12,8 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
     {
         private CrossroadsCardWorker _cardWorker;
 
+        public bool isGameOver => _cardWorker.DeckSize <= 0;
+
         public SolitaireCrossroads()
         {
             _cardWorker = new CrossroadsCardWorker();
