@@ -57,20 +57,24 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
 
         public bool TryParceCoupleCards(CardPosition cardPosA, CardPosition cardPosB)
         {
-            if (TryPeekCard(cardPosA, out CrossroadsCard? cardA) && TryPeekCard(cardPosB, out CrossroadsCard? cardB))
+            if (cardPosA != cardPosB)
             {
-                if (cardA == cardB)
+                if (TryPeekCard(cardPosA, out CrossroadsCard? cardA) && TryPeekCard(cardPosB, out CrossroadsCard? cardB))
                 {
-                    Remove(cardPosA, cardPosB);
-                    return true;
-                }
-                // Try put Reserce to central
-                else if ((cardPosA is CardPosition.Reserve or CardPosition.Central) && (cardPosB is CardPosition.Reserve or CardPosition.Central))
-                {
-                    if (_reserveStack.TryPop(out CrossroadsCard? reserveCard))
+                    if (cardA == cardB)
                     {
-                        _centralStack.Push(reserveCard);
+                        Remove(cardPosA, cardPosB);
                         return true;
+                    }
+                    // Try put Reserce to central
+                    else if ((cardPosA is CardPosition.Reserve && cardPosB is CardPosition.Central)
+                         || (cardPosB is CardPosition.Reserve && cardPosA is CardPosition.Central))
+                    {
+                        if (_reserveStack.TryPop(out CrossroadsCard? reserveCard))
+                        {
+                            _centralStack.Push(reserveCard);
+                            return true;
+                        }
                     }
                 }
             }
