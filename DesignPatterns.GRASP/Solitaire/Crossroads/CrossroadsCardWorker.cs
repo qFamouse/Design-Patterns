@@ -64,17 +64,15 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
                     Remove(cardPosA, cardPosB);
                     return true;
                 }
-            }
-
-            return false;
-        }
-
-        public bool TryPutReserveToCental()
-        {
-            if (_reserveStack.TryPop(out CrossroadsCard? reserveCard))
-            {
-                _centralStack.Push(reserveCard);
-                return true;
+                // Try put Reserce to central
+                else if ((cardPosA is CardPosition.Reserve or CardPosition.Central) && (cardPosB is CardPosition.Reserve or CardPosition.Central))
+                {
+                    if (_reserveStack.TryPop(out CrossroadsCard? reserveCard))
+                    {
+                        _centralStack.Push(reserveCard);
+                        return true;
+                    }
+                }
             }
 
             return false;
