@@ -99,30 +99,28 @@ namespace DesignPatterns.GRASP.Solitaire.Crossroads
 
         #region Private Methods
 
-        private void Remove(CardPosition cardPos)
-        {
-            if (cardPos is CardPosition.Top or CardPosition.Right or CardPosition.Bottom or CardPosition.Left)
-            {
-                _singleCards[(int)cardPos] = null;
-
-            }
-            else if (cardPos is CardPosition.Central)
-            {
-                _centralStack.Pop();
-            }
-            else if (cardPos is CardPosition.Reserve)
-            {
-                _reserveStack.Pop();
-            }
-
-            UpdateCardTo(cardPos);
-        }
-
         private void Remove(params CardPosition[] cardPositions)
         {
-            foreach (var position in cardPositions)
+            foreach (var cardPos in cardPositions)
             {
-                Remove(position);
+                if (cardPos is CardPosition.Top or CardPosition.Right or CardPosition.Bottom or CardPosition.Left)
+                {
+                    _singleCards[(int)cardPos] = null;
+
+                }
+                else if (cardPos is CardPosition.Central)
+                {
+                    _centralStack.Pop();
+                }
+                else if (cardPos is CardPosition.Reserve)
+                {
+                    _reserveStack.Pop();
+                }
+            }
+
+            foreach (var cardPos in cardPositions)
+            {
+                UpdateCardTo(cardPos);
             }
         }
 
