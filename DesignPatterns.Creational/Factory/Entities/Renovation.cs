@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Creational.Factory.Entities
 {
-    public sealed class Repair
+    public sealed class Renovation
     {
-        public Machine Machine { get; set; }
         /// <summary>
         /// Repair date
         /// </summary>
