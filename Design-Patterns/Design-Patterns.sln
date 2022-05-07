@@ -10,7 +10,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "DesignPat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.SOLID", "..\DesignPatterns.SOLID\DesignPatterns.SOLID.csproj", "{1A4461FF-DAB9-4D56-9508-E7506EDE7469}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.GRASP", "..\DesignPatterns.GRASP\DesignPatterns.GRASP.csproj", "{4C785C49-CD90-4736-9B9E-ED046127716E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.GRASP", "..\DesignPatterns.GRASP\DesignPatterns.GRASP.csproj", "{4C785C49-CD90-4736-9B9E-ED046127716E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Creational", "..\DesignPatterns.Creational\DesignPatterns.Creational.csproj", "{7BFC6E56-692C-4C56-B295-D0087543080C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,10 @@ Global
 		{4C785C49-CD90-4736-9B9E-ED046127716E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C785C49-CD90-4736-9B9E-ED046127716E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C785C49-CD90-4736-9B9E-ED046127716E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BFC6E56-692C-4C56-B295-D0087543080C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BFC6E56-692C-4C56-B295-D0087543080C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BFC6E56-692C-4C56-B295-D0087543080C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BFC6E56-692C-4C56-B295-D0087543080C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
