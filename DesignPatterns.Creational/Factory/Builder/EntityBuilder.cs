@@ -10,11 +10,6 @@ namespace DesignPatterns.Creational.Factory.Builder
 {
     public abstract class EntityBuilder
     {
-        protected StreamReader StreamReader { get; set; }
-        public EntityBuilder(StreamReader streamReader)
-        {
-            StreamReader = streamReader;
-        }
         public abstract void ReadMachines(StreamReader stream);
         public abstract void ReadRenovations(StreamReader stream);
         public abstract List<Machine> GetMachines();

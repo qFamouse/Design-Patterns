@@ -11,7 +11,6 @@ namespace DesignPatterns.Creational.Factory.Builder
     public sealed class CsvEntityBuilder : EntityBuilder
     {
         private List<Machine> _machines;
-        public CsvEntityBuilder(StreamReader streamReader) : base(streamReader) { }
 
         public override List<Machine> GetMachines()
         {

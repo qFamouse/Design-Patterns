@@ -11,7 +11,6 @@ namespace DesignPatterns.Creational.Factory.Builder
     public sealed class XmlEntityBuilder : EntityBuilder
     {
         private List<Machine> _machines;
-        public XmlEntityBuilder(StreamReader streamReader) : base(streamReader) { }
 
         public override List<Machine> GetMachines()
         {
