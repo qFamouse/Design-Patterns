@@ -17,5 +17,9 @@ namespace DesignPatterns.Creational.Factory.Entities
         /// Profit from one part
         /// </summary>
         public int PieceProfit { get; set; }
+        /// <summary>
+        /// Repair works
+        /// </summary>
+        List<Renovation> Renovations { get; set; }
     }
 }
