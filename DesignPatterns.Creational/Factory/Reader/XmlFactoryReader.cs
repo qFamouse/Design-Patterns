@@ -11,7 +11,7 @@ namespace DesignPatterns.Creational.Factory.Reader
     {
         public override EntityBuilder GetBuilder()
         {
-            throw new NotImplementedException();
+            return new XmlEntityBuilder();
         }
     }
 }
