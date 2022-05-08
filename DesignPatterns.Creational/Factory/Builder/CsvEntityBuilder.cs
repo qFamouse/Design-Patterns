@@ -2,6 +2,7 @@
 using Microsoft.VisualBasic.FileIO;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace DesignPatterns.Creational.Factory.Builder
 {
     public sealed class CsvEntityBuilder : EntityBuilder
     {
-        private List<Machine> _machines;
+        private List<Machine> _machines = new List<Machine>();
 
         public override List<Machine> GetMachines()
         {
@@ -31,6 +32,7 @@ namespace DesignPatterns.Creational.Factory.Builder
                 machine.Name = fields[0];
                 machine.HourProductivity = ushort.Parse(fields[1]);
                 machine.PieceProfit = ushort.Parse(fields[2]);
+                machine.Renovations = new List<Renovation>();
 
                 _machines.Add(machine);
             }
@@ -47,7 +49,7 @@ namespace DesignPatterns.Creational.Factory.Builder
 
                 Renovation renovation = new Renovation();
 
-                renovation.Date = DateTime.Parse(fields[1]);
+                renovation.Date = DateTime.ParseExact(fields[1], "dd.MM.yyyy", CultureInfo.InvariantCulture);
                 renovation.Description = fields[2];
                 renovation.HoursDuration = ushort.Parse(fields[3]);
                 renovation.Cost = int.Parse(fields[4]);
