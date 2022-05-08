@@ -73,7 +73,7 @@ namespace DesignPatterns.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Red Machine;10.01.2022;Winding break;3;40
+        ///   Looks up a localized string similar to Red Machine;10.01.2022;Winding break;3;400000
         ///Red Machine;14.01.2022;Inter-turn closures;6;100
         ///Red Machine;22.01.2022;Charring and breakdown of the insulation coating;24;200
         ///Blue Machine;01.01.2022;Block contact breakdown;2;20
@@ -84,6 +84,61 @@ namespace DesignPatterns.Properties {
         internal static string CsvRenovations {
             get {
                 return ResourceManager.GetString("CsvRenovations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;Machines&gt;
+        ///	&lt;Machine&gt;
+        ///		&lt;Name&gt;Red Machine&lt;/Name&gt;
+        ///		&lt;HourProductivity&gt;10&lt;/HourProductivity&gt;
+        ///		&lt;PieceProfit&gt;50&lt;/PieceProfit&gt;
+        ///	&lt;/Machine&gt;
+        ///	&lt;Machine&gt;
+        ///		&lt;Name&gt;Blue Machine&lt;/Name&gt;
+        ///		&lt;HourProductivity&gt;1&lt;/HourProductivity&gt;
+        ///		&lt;PieceProfit&gt;100&lt;/PieceProfit&gt;
+        ///	&lt;/Machine&gt;
+        ///	&lt;Machine&gt;
+        ///		&lt;Name&gt;Pink Machine&lt;/Name&gt;
+        ///		&lt;HourProductivity&gt;5&lt;/HourProductivity&gt;
+        ///		&lt;PieceProfit&gt;65&lt;/PieceProfit&gt;
+        ///	&lt;/Machine&gt;
+        ///	&lt;Machine&gt;
+        ///		&lt;Name&gt;Gold Machine&lt;/Name&gt;
+        ///		&lt;HourProductivity&gt;100&lt;/HourP [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string XmlMachines {
+            get {
+                return ResourceManager.GetString("XmlMachines", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;Renovations&gt;
+        ///	&lt;Renovation&gt;
+        ///		&lt;Machine&gt;Red Machine&lt;/Machine&gt;
+        ///		&lt;Date&gt;10.01.2022&lt;/Date&gt;
+        ///		&lt;Description&gt;Winding break&lt;/Description&gt;
+        ///		&lt;HoursDuration&gt;3&lt;/HoursDuration&gt;
+        ///		&lt;Cost&gt;40&lt;/Cost&gt;
+        ///	&lt;/Renovation&gt;
+        ///	&lt;Renovation&gt;
+        ///		&lt;Machine&gt;Red Machine&lt;/Machine&gt;
+        ///		&lt;Date&gt;14.01.2022&lt;/Date&gt;
+        ///		&lt;Description&gt;Inter-turn closures&lt;/Description&gt;
+        ///		&lt;HoursDuration&gt;6&lt;/HoursDuration&gt;
+        ///		&lt;Cost&gt;100&lt;/Cost&gt;
+        ///	&lt;/Renovation&gt;
+        ///	&lt;Renovation&gt;
+        ///		&lt;Machine&gt;Red Machine&lt;/Machine&gt;
+        ///		&lt;Date&gt;22.01.2022 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string XmlRenovations {
+            get {
+                return ResourceManager.GetString("XmlRenovations", resourceCulture);
             }
         }
     }

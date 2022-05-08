@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Machines>
+	<Machine>
+		<Name>Red Machine</Name>
+		<HourProductivity>10</HourProductivity>
+		<PieceProfit>50</PieceProfit>
+	</Machine>
+	<Machine>
+		<Name>Blue Machine</Name>
+		<HourProductivity>1</HourProductivity>
+		<PieceProfit>100</PieceProfit>
+	</Machine>
+	<Machine>
+		<Name>Pink Machine</Name>
+		<HourProductivity>5</HourProductivity>
+		<PieceProfit>65</PieceProfit>
+	</Machine>
+	<Machine>
+		<Name>Gold Machine</Name>
+		<HourProductivity>100</HourProductivity>
+		<PieceProfit>1</PieceProfit>
+	</Machine>
+</Machines>

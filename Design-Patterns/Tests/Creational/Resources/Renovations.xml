@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Renovations>
+	<Renovation>
+		<Machine>Red Machine</Machine>
+		<Date>10.01.2022</Date>
+		<Description>Winding break</Description>
+		<HoursDuration>3</HoursDuration>
+		<Cost>40</Cost>
+	</Renovation>
+	<Renovation>
+		<Machine>Red Machine</Machine>
+		<Date>14.01.2022</Date>
+		<Description>Inter-turn closures</Description>
+		<HoursDuration>6</HoursDuration>
+		<Cost>100</Cost>
+	</Renovation>
+	<Renovation>
+		<Machine>Red Machine</Machine>
+		<Date>22.01.2022</Date>
+		<Description>Charring and breakdown of the insulation coating</Description>
+		<HoursDuration>24</HoursDuration>
+		<Cost>200</Cost>
+	</Renovation>
+	<Renovation>
+		<Machine>Blue Machine</Machine>
+		<Date>01.01.2022</Date>
+		<Description>Block contact breakdown</Description>
+		<HoursDuration>2</HoursDuration>
+		<Cost>20</Cost>
+	</Renovation>
+	<Renovation>
+		<Machine>Blue Machine</Machine>
+		<Date>06.01.2022</Date>
+		<Description>Coil damage</Description>
+		<HoursDuration>3</HoursDuration>
+		<Cost>30</Cost>
+	</Renovation>
+	<Renovation>
+		<Machine>Pink Machine</Machine>
+		<Date>16.01.2022</Date>
+		<Description>Anchor sticking to the core</Description>
+		<HoursDuration>9</HoursDuration>
+		<Cost>150</Cost>
+	</Renovation>
+	<Renovation>
+		<Machine>Gold Machine</Machine>
+		<Date>10.01.2022</Date>
+		<Description>Technical inspection</Description>
+		<HoursDuration>1</HoursDuration>
+		<Cost>0</Cost>
+	</Renovation>
+</Renovations>
