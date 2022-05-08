@@ -11,7 +11,7 @@ namespace DesignPatterns.Creational.Factory
     {
         private static FactorySingleton instance = new FactorySingleton();
 
-        public FactoryReader FactoryReader { get; }
+        public FactoryReader FactoryReader { get; set; }
 
         private protected FactorySingleton() { }
 
