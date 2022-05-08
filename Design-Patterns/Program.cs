@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Tests.GRASP;
+﻿using DesignPatterns.Tests.Creational;
+using DesignPatterns.Tests.GRASP;
 using DesignPatterns.Tests.SOLID;
 
 namespace DesignPatterns
@@ -7,7 +8,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            SolitaireCrossroads.Test();
+            Factory.Test();
         }
     }
 }
