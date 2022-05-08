@@ -20,6 +20,6 @@ namespace DesignPatterns.Creational.Factory.Entities
         /// <summary>
         /// Repair works
         /// </summary>
-        List<Renovation> Renovations { get; set; }
+        public List<Renovation> Renovations { get; set; }
     }
 }
