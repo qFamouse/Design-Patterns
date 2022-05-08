@@ -12,7 +12,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.SOLID", "..\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.GRASP", "..\DesignPatterns.GRASP\DesignPatterns.GRASP.csproj", "{4C785C49-CD90-4736-9B9E-ED046127716E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Creational", "..\DesignPatterns.Creational\DesignPatterns.Creational.csproj", "{7BFC6E56-692C-4C56-B295-D0087543080C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Creational", "..\DesignPatterns.Creational\DesignPatterns.Creational.csproj", "{7BFC6E56-692C-4C56-B295-D0087543080C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
