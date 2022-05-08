@@ -21,5 +21,28 @@ namespace DesignPatterns.Creational.Factory.Entities
         /// Repair works
         /// </summary>
         public List<Renovation> Renovations { get; set; }
+
+        public int CalculatePotentialIncome()
+        {
+            const int WorkingHours = 10;
+            const int MonthDuration = 25;
+            return WorkingHours * MonthDuration * HourProductivity * PieceProfit;
+        }
+
+        public int CalculateMonthlyIncome(int month)
+        {
+            int potentionalIncome = CalculatePotentialIncome();
+            int cashExpenses = 0;
+
+            var renovationsPerMonth = Renovations.FindAll(r => r.Date.Month == month);
+            foreach (var renovation in renovationsPerMonth)
+            {
+                int lostProfit = renovation.HoursDuration * HourProductivity * PieceProfit;
+                int repairCost = renovation.Cost;
+                cashExpenses += lostProfit + repairCost;
+            }
+
+            return potentionalIncome - cashExpenses;
+        }
     }
 }
