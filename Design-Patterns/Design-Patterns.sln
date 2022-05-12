@@ -14,6 +14,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.GRASP", "..\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Creational", "..\DesignPatterns.Creational\DesignPatterns.Creational.csproj", "{7BFC6E56-692C-4C56-B295-D0087543080C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Structural", "..\DesignPatterns.Structural\DesignPatterns.Structural.csproj", "{26470612-7E7C-46A3-96B6-0AEC7E9A35C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{7BFC6E56-692C-4C56-B295-D0087543080C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BFC6E56-692C-4C56-B295-D0087543080C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BFC6E56-692C-4C56-B295-D0087543080C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26470612-7E7C-46A3-96B6-0AEC7E9A35C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26470612-7E7C-46A3-96B6-0AEC7E9A35C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26470612-7E7C-46A3-96B6-0AEC7E9A35C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26470612-7E7C-46A3-96B6-0AEC7E9A35C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
