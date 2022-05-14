@@ -10,6 +10,7 @@
     <ProjectReference Include="..\DesignPatterns.Creational\DesignPatterns.Creational.csproj" />
     <ProjectReference Include="..\DesignPatterns.GRASP\DesignPatterns.GRASP.csproj" />
     <ProjectReference Include="..\DesignPatterns.SOLID\DesignPatterns.SOLID.csproj" />
+    <ProjectReference Include="..\DesignPatterns.Structural\DesignPatterns.Structural.csproj" />
   </ItemGroup>
 
   <ItemGroup>
