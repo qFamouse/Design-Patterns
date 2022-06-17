@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Behavioral.Command.Commands
 {
-    internal class InsertStatusCommand : BaseCommand, IUndoCommand
+    public class InsertStatusCommand : BaseCommand, IUndoCommand
     {
         public InsertStatusCommand(BugTrackingSystem bugTrackingSystem, Receiver receiver)
             : base(bugTrackingSystem, receiver) { }

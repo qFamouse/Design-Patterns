@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Behavioral.Command.Commands
 {
-    internal class EditStatusCommand : BaseCommand, IUndoCommand
+    public class EditStatusCommand : BaseCommand, IUndoCommand
     {
         public EditStatusCommand(BugTrackingSystem bugTrackingSystem, Receiver receiver)
             : base(bugTrackingSystem, receiver) { }

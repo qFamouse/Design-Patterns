@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Behavioral.Command.Commands
 {
-    internal class InsertCriticallyLevelCommand : BaseCommand, IUndoCommand
+    public class InsertCriticallyLevelCommand : BaseCommand, IUndoCommand
     {
         public InsertCriticallyLevelCommand(BugTrackingSystem bugTrackingSystem, Receiver receiver)
             : base(bugTrackingSystem, receiver) { }

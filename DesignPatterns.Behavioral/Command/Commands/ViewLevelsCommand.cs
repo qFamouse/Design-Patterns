@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Behavioral.Command.Commands
 {
-    internal class ViewLevelsCommand : BaseCommand
+    public class ViewLevelsCommand : BaseCommand
     {
         public ViewLevelsCommand(BugTrackingSystem bugTrackingSystem, Receiver receiver)
             : base(bugTrackingSystem, receiver) { }
