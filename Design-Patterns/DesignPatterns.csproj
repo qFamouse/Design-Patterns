@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DesignPatterns.Behavioral\DesignPatterns.Behavioral.csproj" />
     <ProjectReference Include="..\DesignPatterns.Creational\DesignPatterns.Creational.csproj" />
     <ProjectReference Include="..\DesignPatterns.GRASP\DesignPatterns.GRASP.csproj" />
     <ProjectReference Include="..\DesignPatterns.SOLID\DesignPatterns.SOLID.csproj" />

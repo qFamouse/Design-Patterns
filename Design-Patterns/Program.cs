@@ -2,6 +2,7 @@
 using DesignPatterns.Tests.Creational;
 using DesignPatterns.Tests.GRASP;
 using DesignPatterns.Tests.SOLID;
+using DesignPatterns.Tests.Behavioral;
 
 namespace DesignPatterns
 {
@@ -9,7 +10,7 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            Composite.Test();
+            Command.Test();
         }
     }
 }
