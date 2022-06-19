@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Behavioral.Command.Entities
 {
+    [Serializable]
     public class Status : ICloneable
     {
         public object Clone() => MemberwiseClone();
